@@ -33,9 +33,19 @@
         <section id="related-work">
             <h2>Related Work</h2>
             <p>Several projects and studies have informed our approach to making children’s artwork accessible to BLV parents.</p>
+            <h3>User-Centered Design in Accessibility</h3>
+            <p>User-centered design principles are crucial in accessibility projects. Previous studies emphasize the importance of involving end-users in the design process to create solutions that truly meet their needs. Hence, the research mentioned above has been conducted with BLV parents and children, ensuring that the app is both usable and valuable in the mixed-ability settings.</p>
             <h3>AI-Generated Descriptions</h3>
             <p>Previous work has explored the use of AI to generate descriptions for visual content. Projects like Microsoft's Seeing AI and Google's Lookout provide insights into the capabilities and limitations of AI in generating useful descriptions for visually impaired users.</p>
-            <h3>Engaging with Children's Artwork in Mixed Visual Ability Families (In Submission)</h3>
+            <h3>Technology in Mixed-Ability Family Interactions</h3>
+            <p>Prior research in mixed-ability family settings includes work by <a href="#formative-research1">[1]</a> and <a href="#formative-research2">[2]</a>, who explore the design of technology for co-reading interactions between BLV parents and their children, approaching the BLV parent's perspective through observational and interview studies like we do in our work. However, prior research has not investigated technology facilitating a mixed visual-ability family's interaction regarding children's artwork.</p>
+            <h3>Formative Work [In Submission]</h3>
+            <p>A member of our team led formative work that is in submission <a href="#formative-research3">[3]</a> to investigate what motivates BLV relatives to engage with their children’s artwork, current practices by BLV relatives and their children to discuss and adapt the child’s artwork, BLV adults and sighted children’s reactions to AI interpretations of the child’s artwork, and the families’ collective responses to the technology design probes. These research questions were explored through two studies: the first was with 14 BLV individuals, and the second study was with 5 BLV relative and sighted children groups. These studies consisted of semi-structured interviews, using two different AI tools to describe children’s artwork (provided by the BLV family members), and two in-person design probes to evaluate preferred technology representation mediums for nonvisual understanding of children’s artwork. Through these studies, researchers found that BLV family members are motivated by a desire to emotionally connect and bond with their child, as well as a need to understand their child’s developmental growth and skills. While many BLV individuals found some benefits to AI descriptions, saying that some information was better than none and it enabled them to have a conversation or ask questions to their children, some parents did not like it when the AI used simplistic or reductive language to explain their child’s art. These findings specifically around the role and language of AI have heavily informed this present work.</p>
+            
+
+
+
+            <!-- <h3>Engaging with Children's Artwork in Mixed Visual Ability Families (In Submission)</h3>
             <p>Chheda-Kothary et al. <a href="#formative-research">[1]</a> conducted two studies: the first was with 14 BLV individuals, and the second study was with 5 BLV relative and sighted children groups. These studies consisted of semi-structured interviews, using two different AI tools to describe children’s artwork (provided by the BLV family members), and two in-person design probes to evaluate preferred technology representation mediums for nonvisual understanding of children’s artwork.</p>
             <p>Findings from this work included several different themes: what motivates BLV relatives to engage with their children’s artwork, current practices by BLV relatives and their children to discuss and adapt the child’s artwork, BLV adults and sighted children’s reactions to AI interpretations of the child’s artwork, and the families’ collective responses to the technology design probes. We found that BLV family members are motivated by a desire to emotionally connect and bond with their child, as well as a need to understand their child’s developmental growth and skills: </p>
             <blockquote>
@@ -52,23 +62,35 @@
             <blockquote>
                 <p>“I thought [the AI] missed the joy that she [my great-granddaughter] put into it. And I thought it missed the love.”  - P8, a great-grandmother</p>
             </blockquote>
-            <p>While many BLV individuals found some benefits to AI descriptions, saying that some information was better than none and it enabled them to have a conversation or ask questions to their children, P9 and P12 did not like it when the AI used simplistic or reductive language to explain their child’s art. In terms of children’s reactions, the children did not like when AI tools completely misinterpreted something in their art (such as P6’s son expressing his “hate” for AI when it called one of his drawings of a turkey a “cat”), and they wanted to be able to change or add to AI descriptions for their BLV caregivers. Finally, the two families with whom we conducted in-person design probes expressed preferences for a combination of tactile and audio representations of children’s artwork. </p>
-            <h3>User-Centered Design in Accessibility</h3>
-            <p>User-centered design principles are crucial in accessibility projects. Previous studies emphasize the importance of involving end-users in the design process to create solutions that truly meet their needs. Hence, the research mentioned above has been conducted with BLV parents and children, ensuring that the app is both usable and valuable in the mixed-ability settings.</p>
+            <p>While many BLV individuals found some benefits to AI descriptions, saying that some information was better than none and it enabled them to have a conversation or ask questions to their children, P9 and P12 did not like it when the AI used simplistic or reductive language to explain their child’s art. In terms of children’s reactions, the children did not like when AI tools completely misinterpreted something in their art (such as P6’s son expressing his “hate” for AI when it called one of his drawings of a turkey a “cat”), and they wanted to be able to change or add to AI descriptions for their BLV caregivers. Finally, the two families with whom we conducted in-person design probes expressed preferences for a combination of tactile and audio representations of children’s artwork. </p> -->
+
         </section>
         <section id="methodology-and-results">
             <h2>Methodology and Evaluation</h2>
             <h3>Project Design</h3>
             <p>We designed an iOS app that uses ChatGPT to generate descriptions from pictures of children's artwork. The app includes features like voiceover compatibility, high-contrast visual settings, and an intuitive navigation system to ensure accessibility for BLV users.</p>
             <h3>Implementation</h3>
-            <p>Our development process involved several key steps:</p>
+            <p>Our major contributions in the final project include:</p>
             <ul>
-                <li>Finalizing designs for our app, including the interaction flows for users.</li>
-                <li>Performing prompt engineering to ensure comprehensive and accurate artwork descriptions.</li>
-                <li>Building the app's core functionality to process images and generate descriptions from ChatGPT.</li>
-                <li>Incorporating UI for recording voice memo of children’s descriptions of their artwork.</li>
+                <li>Finalizing designs for our app, including the interaction flows for users (Shown in <a href="#figure-designs">Figure 1</a>).</li>
+                <li>Performing prompt engineering and validating prompts to ensure comprehensive and accurate artwork descriptions. We also validated the relevance of prompt by comparing outputs from a custom GPT (with prompt) - ArtInsight and GPT-4o (without prompt)</li>
+                <p>Final Prompt:</p>
+                <blockquote>
+                    <p>"This assistant helps blind parents understand their childrens visual artwork. It provides detailed, respectful descriptions of the artwork, focusing on descriptive aspects such as orientation, scenery, number of artifacts or figures, main colors, and themes. The assistant avoids reductive or overly simplifying language that minimizes the childs effort and does not assume interpretations if uncertain. For example, it says, ‘The person has a frown, and there are tears falling from their eyes’ instead of ‘The person appears to be sad.’ When given feedback from the parent or child about the artwork, the assistant honors and integrates this perspective into its descriptions and future responses. The assistant maintains a respectful, supportive, and engaging tone, encouraging open dialogue about the artwork. This assistant uses a casual tone but will switch to a more formal tone if requested by the parent or child. The assistant avoids making assumptions about names or identities based on any text in the artwork."</p>
+                </blockquote>
+                <li>Building the app's core functionality to process images and generate descriptions from ChatGPT (<a href="https://drive.google.com/file/d/1IIV68pUCShIby07sAVK6CLpHyGJWEWYf/view?resourcekey">Click here for app demo</a>).</li>
+                <li>Incorporating UI for recording voice memo of children’s descriptions of their artwork (The UI of our app is shown in <a href="#figure-app-ui">Figure 2</a>).</li>
                 <li>Out of Scope: We plan to implement a human-in-the-loop system for users to edit AI-generated descriptions.</li>
             </ul>
+
+            <h4>Salient Features of the iOS app</h4>
+            <ul>
+                <li>Integrates with iOS accessibility settings (success criterion)</li>
+                <li>Additional, custom VoiceOver and dynamic-type support (success criterion) - It is an iOS / MacOS feature which automatically scales text according to user preference (includes large, accessible fonts)</li>
+                <li>Integrates with iPhone camera via third-party library</li>
+                <li>Core functionality: Uploads image, Asks custom GPT for a description, Polls for response (<a href="https://drive.google.com/file/d/1sT7chRJkPt9kCuQuaDs2ODw9QF0FjDqA/view?resourcekey">Click here for app demo with the Dynamic Type Support</a>)</li>
+            </ul>
+    
             <h3>Metrics and Validation</h3>
             <p>These are some metrics for success that we considered:</p>
             <ul>
@@ -77,19 +99,28 @@
                 <li><strong>Error Handling</strong>: We tested the app for robustness by inputting various types of images, including very complex, very simple, or irrelevant images, and ensure that the app handles errors gracefully without crashing.</li>
                 <li><strong>AI Descriptions Match Formative Work Guidelines</strong>: We validated that our custom GPT described all elements of the artwork in appropriate language, and was not reductive, simplistic, and presumptive.</li>
             </ul>
+
+            <h4>Success Criteria for AI Descriptions</h4>
+            <p>We evaluated the AI descriptions of 10 different artworks created by children by GPT-4o and our custom GPT (Art Insight) by recording the number of elements identified, usage of reductive language, usage of simplistic descriptions, usage of presumptive statements by the AI descriptions.</p>
+            <ul>
+                <li>Art Insight performed better than GPT 4o on 6/10 different drawings.</li>
+                <li>GPT 4o performed better than Art Insgight on 1/10 drawings.</li>
+                <li>Both (Art Insight and GPT 4o) had equal performance on 3/10 drawings.</li>
+            </ul>
+
             <p>These are some other metrics for success (Out of Scope):</p>
             <ul>
                 <li><strong>Usability</strong>: We plan to evaluate our app through user testing sessions with BLV parents.</li>
                 <li><strong>Accuracy</strong>: We plan to compare AI-generated descriptions with a set of reference descriptions created by sighted individuals.</li>
                 <li><strong>Engagement</strong>: We plan to measure the frequency and quality of interactions between parents and children facilitated by the app.</li>
             </ul>
-            <figure>
+            <figure id="figure-designs">
                 <img src="app_designs.png" alt="A series of screens indicating different states of the Children's Artwork app, from left to right. The first screen (far left) shows a sign in screen to access the app, where you can use your email or Gmail. The second screen shows the option to upload an image. The third screen shows the Upload flow triggering a photo gallery, the following screens are organized as two stacked screens where the top one shows the photo gallery from the camera roll, and the other shows the uploaded photo. The next two screens to the right first show a confirmation screen to use the selected photo, and then show a child's artwork of a pink flower with its AI-generated description along with 'Save' and 'Edit' buttons. The last screen (far right) shows how you can use the 'Edit' button to change a part of the AI description, which is highlighted in yellow.">
-                <figcaption>Different UI screens indicating different states of the Children's artwork app</figcaption>
+                <figcaption>Figure 1: Different UI screens indicating different states of the Children's artwork app</figcaption>
             </figure>
-            <figure>
+            <figure id="figure-app-ui">
                 <img src="app_interfaces.png" alt="Two screenshots of the app interface screens.  The first screen has a white progress spinner with the label: 'Waiting for description'. Behind the spinner is a photo of a child's colorful drawing of a family standing in front of a house and tree with a sun in the sky. Above the photo and progress spinner is a 'Cancel' button.The showing an artwork description screen. The description reads 'A colorful drawing of a house with a sun and flowers.' The interface includes options for voiceover and high-contrast settings. The second screen has a ‘ Cancel’ button in the top-left corner and a ‘Save’ button in the top-right corner. Beneath is a photo of a child's colorful drawing of a family standing in front of a house and tree with a sun in the sky. Below the photo is a ‘Description’ label and an editable text box with a textual description of the image. At the bottom of the screen is a button to ‘Record a voice memo’.">
-                <figcaption>Screenshots of the app interface showing screens to capture an artwork and show the AI-generated description</figcaption>
+                <figcaption>Figure 2: Screenshots of the app interface showing screens to capture an artwork and show the AI-generated description</figcaption>
             </figure>
             <h3>Results</h3>
             <p>The project has made significant strides in developing a tool that addresses a critical need for BLV parents, enabling them to engage more deeply with their children's artwork. The initial technical achievements and validation of core accessibility features provide a solid foundation for further refinement and user testing. The positive feedback from formative research, combined with the adherence to accessibility principles, positions the project for successful deployment and meaningful impact on the lives of mixed visual ability families.</p>
@@ -109,15 +140,23 @@
         <section id="learnings-and-future-work">
             <h2>Learnings and Future Work</h2>
             <h3>Learnings</h3>
-            <p>Through this project, we learned the importance of involving end-users in the design process. Feedback from BLV parents and their children was invaluable in shaping the app's features and ensuring its relevance. We also recognized the potential of AI in generating meaningful descriptions but noted the necessity of human oversight to ensure accuracy and personal connection.</p>
+            <p>Through this project, we learned the importance of involving end-users in the design process. Feedback from BLV parents and their children was invaluable in shaping the app's features and ensuring its relevance. We learnt how to build an accessible iOS app while integrating GPT APIs. We defined various success metrics for validating our work, and also recognized the potential of AI in generating meaningful descriptions. However, we noted the necessity of human oversight to ensure accuracy and personal connection.</p>
             <h3>Future Work</h3>
             <p>Future work will focus on expanding the app’s capabilities to include more interactive features, such as voice memos from children describing their artwork. We also plan to explore integrations with other accessibility tools and conduct long-term studies to assess the app’s impact on parent-child relationships. Additionally, we aim to refine the AI algorithms to improve the accuracy and emotional depth of the descriptions.</p>
-            <p>By continuing to build on our findings and incorporating user feedback, we hope to create a robust tool that significantly enhances the way BLV parents interact with their children's artwork, fostering deeper connections and understanding.</p>
+            <p>By continuing to build on our findings and incorporating user feedback, we hope to create a robust tool that significantly enhances the way BLV parents interact with their children's artwork, fostering deeper connections and understanding. Some concrete next steps are:</p>
+            <ul>
+                <li>Refine GPT instructions for higher success per our criteria</li>
+                <li>Feed child’s description (voice or text) into AI descriptor</li>
+                <li>Consider application as an agent – should it suggest questions or prompt the user to collect more data?</li>
+            </ul>
         </section>
-    
-    <section id="formative-research">
+
+
+    <section>
         <h2>References</h2>
-        <p>[1] [In Submission] A. Chheda-Kothary, J. O. Wobbrock, and J. Froehlich, “Engaging with Children’s Artwork in Mixed Visual Ability Families,” in Proceedings of the ACM SIGACCESS, 2024.</p>
+        <p id="formative-research1">[1] Park, S., Cassidy, C.T., & Branham, S.M. (2023). “It’s All About the Pictures:” Understanding How Parents/Guardians With Visual Impairments Co-Read With Their Child(ren). Proceedings of the 25th International ACM SIGACCESS Conference on Computers and Accessibility.</p>
+        <p id="formative-research2">[2] Storer, K.M., & Branham, S.M. (2019). "That's the Way Sighted People Do It": What Blind Parents Can Teach Technology Designers About Co-Reading with Children. Proceedings of the 2019 on Designing Interactive Systems Conference.</p>
+        <p id="formative-research3">[3] [In Submission] Anonymous Authors, “Engaging with Children’s Artwork in Mixed Visual Ability Families,” in Proceedings of the ACM SIGACCESS, 2024.</p>
     </section>
 
     <footer>
